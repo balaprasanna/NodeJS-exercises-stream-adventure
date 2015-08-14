@@ -1,3 +1,5 @@
 var fs = require('fs')
 var inputfile = process.argv[2]
-fs.createReadStream(inputfile).pipe(process.stdout);
+var stream = fs.createReadStream(inputfile)
+stream.pipe(process.stdout)
+//.pipe(process.stdout);
